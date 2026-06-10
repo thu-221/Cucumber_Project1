@@ -20,7 +20,7 @@ public class LoginSteps extends baseTest {
 	}
 	
 	@When("I enter invalid username and password and click the login button")
-	public void passinginvalidvalues()
+	public void passinginvalidvalues() throws InterruptedException
 	{
 		login.enterUsernamePassword("invalidusername", "invalidpassword");
 	}
@@ -32,7 +32,7 @@ public class LoginSteps extends baseTest {
 	}
 	
 	@When("I enter valid username and password and click on login button")
-	public void passingvalidvalues()
+	public void passingvalidvalues() throws InterruptedException
 	{
 		login.enterUsernamePassword("www.alanchacko596@gmail.com","12345678");
 	}

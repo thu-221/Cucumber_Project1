@@ -22,12 +22,13 @@ public class loginpage {
 	By password = By.id("customer_password");
 	By LoginClick = By.xpath("//input[@value='Sign In']");
 	
-	public void enterUsernamePassword(String user, String pass)
+	public void enterUsernamePassword(String user, String pass) throws InterruptedException
 	{
 		WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(username));
 		usernameField.sendKeys(user);
 		WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(password));
 		passwordField.sendKeys(pass);
+		Thread.sleep(3000);
 		WebElement loginbutton = wait.until(ExpectedConditions.elementToBeClickable(LoginClick));
 		loginbutton.click();
 		
